@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft_blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --v_dark_blue_main_bg: hsl(217, 54%, 11%);
+  --v_dark_blue_card_bg: hsl(216, 50%, 16%);
+  --v_dark_blue_line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: var(--v_dark_blue_main_bg);
+  display: flex;
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  padding: 1.2rem;
+  background-color: var(--v_dark_blue_card_bg);
+  border-radius: 0.6rem;
+  max-width: 375px;
+  margin: auto;
+}
+
+.top_img_div {
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  position: relative;
+  height: 331.8px;
+}
+
+.top_img_div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(./images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: center;
+  background-color: hsl(178, 100%, 50%, 0.45);
+  display: none;
+}
+
+.top_img_div:hover::before {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+h1 {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.desc {
+  color: var(--soft_blue);
+  opacity: 0.8;
+  font-weight: 300;
+  margin-block: 1rem;
+}
+
+.price_days_div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.etherium {
+  display: flex;
+}
+
+.etherium span {
+  color: var(--cyan);
+  font-size: 1rem;
+}
+
+.clock {
+  display: flex;
+}
+
+.clock span {
+  color: var(--soft_blue);
+  /* font-size: 1rem; */
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--v_dark_blue_line);
+}
+
+.avatar_name_div {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.avatar_div {
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.name p {
+  color: var(--soft_blue);
+
+  font-weight: 400;
+}
+
+.name p span {
+  color: var(--white);
+  cursor: pointer;
+}
